@@ -277,7 +277,7 @@ function FloatingLocaleSwitcher({
   onLocaleChange: (locale: Locale) => void;
 }) {
   return (
-    <div className="fixed inset-x-0 bottom-5 z-40 flex justify-center px-4 sm:hidden">
+    <div className="pointer-events-none fixed inset-x-0 bottom-5 z-40 flex justify-center px-4 sm:hidden">
       <FloatingLocaleContent
         content={content}
         locale={locale}
@@ -300,7 +300,7 @@ function FloatingLocaleContent({
   onLocaleChange: (locale: Locale) => void;
 }) {
   return (
-    <div className="flex flex-col items-center gap-3">
+    <div className="pointer-events-auto flex flex-col items-center gap-3">
       <LocaleSwitcher
         label={content.localeSwitcher.label}
         locale={locale}
@@ -353,7 +353,7 @@ function PortfolioMain({ actions, content, onOpen, openKey }: OpenHandlerProps) 
   const prefersReducedMotion = Boolean(useReducedMotion());
 
   return (
-    <main className="relative flex flex-1 items-center justify-center py-4 sm:py-6 lg:py-8">
+    <main className="relative flex flex-1 items-start justify-center py-4 sm:py-6 lg:py-8">
       <m.div
         animate={{ opacity: 1, y: 0 }}
         className="relative w-full overflow-hidden rounded-[2.5rem] border border-white/70 bg-white/76 px-6 py-8 shadow-[0_22px_72px_rgba(0,0,0,0.08)] backdrop-blur-xl sm:px-8 sm:py-10 lg:px-12 lg:py-12"
