@@ -31,6 +31,18 @@ describe("PortfolioModal", () => {
     document.body.style.overflow = "";
   });
 
+  it("matches the modal snapshot", () => {
+    const { asFragment } = render(
+      <PortfolioModal
+        content={enDictionary}
+        onClose={jest.fn()}
+        openKey="about"
+      />,
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+  });
+
   it("renders the modal with the localized close label", () => {
     render(
       <PortfolioModal

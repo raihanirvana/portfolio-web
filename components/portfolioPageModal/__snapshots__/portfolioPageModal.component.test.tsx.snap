@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PortfolioModal matches the modal snapshot 1`] = `
+<DocumentFragment>
+  <div
+    animate="[object Object]"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-zinc-950/28 p-3 backdrop-blur-xl sm:p-4"
+    exit="[object Object]"
+    initial="[object Object]"
+    transition="[object Object]"
+  >
+    <div
+      animate="[object Object]"
+      aria-labelledby="modal-title"
+      aria-modal="true"
+      class="relative max-h-[90vh] w-full max-w-5xl overflow-hidden rounded-[2rem] border border-white/70 bg-white shadow-[0_24px_80px_rgba(0,0,0,0.18)]"
+      exit="[object Object]"
+      id="portfolio-modal"
+      initial="[object Object]"
+      role="dialog"
+      transition="[object Object]"
+    >
+      <div
+        class="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white/55 to-transparent"
+      />
+      <div
+        class="relative flex items-start justify-between border-b border-zinc-200/80 px-5 py-5 sm:px-8"
+      >
+        <div>
+          <p
+            class="text-[10px] uppercase tracking-[0.3em] text-zinc-400 sm:text-[11px]"
+          >
+            A brief introduction
+          </p>
+          <h2
+            class="mt-2 text-2xl font-semibold tracking-tight text-zinc-950 sm:text-3xl"
+            id="modal-title"
+          >
+            About
+          </h2>
+        </div>
+        <button
+          aria-label="Close modal"
+          class="rounded-full border border-zinc-200 bg-white/80 p-2 text-zinc-500 transition hover:bg-white hover:text-zinc-900"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="h-5 w-5"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M18 6 6 18"
+            />
+            <path
+              d="m6 6 12 12"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="max-h-[calc(90vh-92px)] overflow-y-auto px-5 py-5 sm:px-8 sm:py-7"
+      >
+        <div
+          class="space-y-5 text-sm leading-7 text-zinc-700"
+        >
+          <p>
+            I’m Raihan Irvana, a Fullstack Engineer with a strong foundation in the JavaScript ecosystem and hands-on experience building products across both frontend and backend.
+          </p>
+          <p>
+            I care about thoughtful engineering, product clarity, and clean execution. My approach is simple: build things that are reliable, maintainable, and genuinely useful.
+          </p>
+          <p>
+            I’ve worked in digital banking, contributed to product development end-to-end, and collaborated across engineering and product to help ship features with clarity and confidence.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

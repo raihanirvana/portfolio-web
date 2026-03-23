@@ -1,0 +1,250 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`portfolioHeader.component matches the floating social links snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="pointer-events-none fixed inset-x-0 bottom-5 z-40 flex justify-center px-4 sm:hidden"
+  >
+    <div
+      class="pointer-events-auto"
+    >
+      <div
+        class="flex items-center gap-2 rounded-full border border-zinc-200 bg-white/92 p-1.5 shadow-sm backdrop-blur-xl"
+      >
+        <a
+          aria-label="GitHub"
+          class="rounded-full border border-zinc-200 bg-white p-2.5 text-zinc-600 transition hover:text-zinc-950"
+          href="https://github.com/raihanirvana"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <svg
+            aria-hidden="true"
+            class="h-4 w-4"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M9 19c-4.3 1.4-4.3-2.5-6-3"
+            />
+            <path
+              d="M15 22v-3.9a3.4 3.4 0 0 0-.9-2.6c3 0 6-1.8 6-8a6.2 6.2 0 0 0-1.7-4.3 5.8 5.8 0 0 0-.1-4.3s-1.4-.4-4.6 1.7a15.8 15.8 0 0 0-8.4 0C2.1-1.5.7-1.1.7-1.1A5.8 5.8 0 0 0 .6 3.2 6.2 6.2 0 0 0-1.1 7.5c0 6.2 3 8 6 8a3.4 3.4 0 0 0-.9 2.6V22"
+              transform="translate(2 1)"
+            />
+          </svg>
+        </a>
+        <a
+          aria-label="LinkedIn"
+          class="rounded-full border border-zinc-200 bg-white p-2.5 text-zinc-600 transition hover:text-zinc-950"
+          href="https://linkedin.com/in/raihanirvana"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <svg
+            aria-hidden="true"
+            class="h-4 w-4"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"
+              transform="translate(-2 0)"
+            />
+            <rect
+              height="12"
+              width="4"
+              x="2"
+              y="9"
+            />
+            <circle
+              cx="4"
+              cy="4"
+              r="2"
+            />
+          </svg>
+        </a>
+        <a
+          aria-label="Email"
+          class="rounded-full border border-zinc-200 bg-white p-2.5 text-zinc-600 transition hover:text-zinc-950"
+          href="mailto:raihanirvana13@gmail.com"
+        >
+          <svg
+            aria-hidden="true"
+            class="h-4 w-4"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <rect
+              height="16"
+              rx="2"
+              width="20"
+              x="2"
+              y="4"
+            />
+            <path
+              d="m22 7-10 7L2 7"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`portfolioHeader.component matches the header snapshot 1`] = `
+<DocumentFragment>
+  <header
+    animate="[object Object]"
+    class="flex items-center justify-between rounded-full border border-white/70 bg-white/72 px-4 py-3 shadow-[0_14px_44px_rgba(0,0,0,0.06)] backdrop-blur-xl sm:px-5"
+    initial="[object Object]"
+    transition="[object Object]"
+  >
+    <div
+      class="flex items-center gap-3"
+    >
+      <div
+        class="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-950 text-sm font-semibold text-white shadow-sm"
+      >
+        RI
+      </div>
+      <div>
+        <div
+          class="text-sm font-semibold text-zinc-950"
+        >
+          Raihan Irvana
+        </div>
+        <div
+          class="text-xs text-zinc-500"
+        >
+          Fullstack Engineer
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex items-center gap-2"
+    >
+      <nav
+        aria-label="Select language"
+        class="mr-2 inline-flex rounded-full border border-zinc-200 bg-white p-1 shadow-sm"
+      >
+        <button
+          class="rounded-full px-3 py-1.5 text-xs font-semibold text-zinc-500"
+          type="button"
+        >
+          ID
+        </button>
+        <button
+          class="rounded-full bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-white"
+          type="button"
+        >
+          EN
+        </button>
+      </nav>
+      <div
+        class="hidden items-center gap-2 sm:flex"
+      >
+        <a
+          aria-label="GitHub"
+          class="rounded-full border border-zinc-200 bg-white p-2.5 text-zinc-600 transition hover:text-zinc-950"
+          href="https://github.com/raihanirvana"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <svg
+            aria-hidden="true"
+            class="h-4 w-4"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M9 19c-4.3 1.4-4.3-2.5-6-3"
+            />
+            <path
+              d="M15 22v-3.9a3.4 3.4 0 0 0-.9-2.6c3 0 6-1.8 6-8a6.2 6.2 0 0 0-1.7-4.3 5.8 5.8 0 0 0-.1-4.3s-1.4-.4-4.6 1.7a15.8 15.8 0 0 0-8.4 0C2.1-1.5.7-1.1.7-1.1A5.8 5.8 0 0 0 .6 3.2 6.2 6.2 0 0 0-1.1 7.5c0 6.2 3 8 6 8a3.4 3.4 0 0 0-.9 2.6V22"
+              transform="translate(2 1)"
+            />
+          </svg>
+        </a>
+        <a
+          aria-label="LinkedIn"
+          class="rounded-full border border-zinc-200 bg-white p-2.5 text-zinc-600 transition hover:text-zinc-950"
+          href="https://linkedin.com/in/raihanirvana"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <svg
+            aria-hidden="true"
+            class="h-4 w-4"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"
+              transform="translate(-2 0)"
+            />
+            <rect
+              height="12"
+              width="4"
+              x="2"
+              y="9"
+            />
+            <circle
+              cx="4"
+              cy="4"
+              r="2"
+            />
+          </svg>
+        </a>
+        <a
+          aria-label="Email"
+          class="rounded-full border border-zinc-200 bg-white p-2.5 text-zinc-600 transition hover:text-zinc-950"
+          href="mailto:raihanirvana13@gmail.com"
+        >
+          <svg
+            aria-hidden="true"
+            class="h-4 w-4"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <rect
+              height="16"
+              rx="2"
+              width="20"
+              x="2"
+              y="4"
+            />
+            <path
+              d="m22 7-10 7L2 7"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+</DocumentFragment>
+`;

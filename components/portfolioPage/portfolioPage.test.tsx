@@ -4,9 +4,9 @@ import { act, fireEvent, render } from "@testing-library/react";
 jest.mock("next/dynamic", () =>
   function dynamic() {
     return function DynamicModal(
-      props: React.ComponentProps<typeof import("./portfolioPageModal.component").PortfolioModal>,
+      props: React.ComponentProps<typeof import("../portfolioPageModal/portfolioPageModal.component").PortfolioModal>,
     ) {
-      const { PortfolioModal } = require("./portfolioPageModal.component");
+      const { PortfolioModal } = require("../portfolioPageModal/portfolioPageModal.component");
 
       return <PortfolioModal {...props} />;
     };

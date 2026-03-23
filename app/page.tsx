@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 
-import { PortfolioPage } from "@/components/portfolio/portfolioPage";
+import { PortfolioPage } from "@/components/portfolioPage/portfolioPage";
 import { enDictionary } from "@/content/locales/en";
 import { siteConfig } from "@/lib/site";
 

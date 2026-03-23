@@ -41,27 +41,23 @@ exports[`PortfolioPage matches the about modal snapshot 1`] = `
         <div
           class="flex items-center gap-2"
         >
-          <div
-            class="sm:flex hidden"
+          <nav
+            aria-label="Select language"
+            class="mr-2 inline-flex rounded-full border border-zinc-200 bg-white p-1 shadow-sm"
           >
-            <nav
-              aria-label="Select language"
-              class="mr-2 inline-flex rounded-full border border-zinc-200 bg-white p-1 shadow-sm"
+            <button
+              class="rounded-full px-3 py-1.5 text-xs font-semibold text-zinc-500"
+              type="button"
             >
-              <button
-                class="rounded-full px-3 py-1.5 text-xs font-semibold text-zinc-500"
-                type="button"
-              >
-                ID
-              </button>
-              <button
-                class="rounded-full bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-white"
-                type="button"
-              >
-                EN
-              </button>
-            </nav>
-          </div>
+              ID
+            </button>
+            <button
+              class="rounded-full bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-white"
+              type="button"
+            >
+              EN
+            </button>
+          </nav>
           <div
             class="hidden items-center gap-2 sm:flex"
           >
@@ -156,7 +152,7 @@ exports[`PortfolioPage matches the about modal snapshot 1`] = `
         </div>
       </header>
       <main
-        class="relative flex flex-1 items-center justify-center py-4 sm:py-6 lg:py-8"
+        class="relative flex flex-1 items-start justify-center py-4 sm:py-6 lg:py-8"
       >
         <div
           animate="[object Object]"
@@ -540,28 +536,11 @@ exports[`PortfolioPage matches the about modal snapshot 1`] = `
       </main>
     </div>
     <div
-      class="fixed inset-x-0 bottom-5 z-40 flex justify-center px-4 sm:hidden"
+      class="pointer-events-none fixed inset-x-0 bottom-5 z-40 flex justify-center px-4 sm:hidden"
     >
       <div
-        class="flex flex-col items-center gap-3"
+        class="pointer-events-auto"
       >
-        <nav
-          aria-label="Select language"
-          class="mr-2 inline-flex rounded-full border border-zinc-200 bg-white p-1 shadow-sm"
-        >
-          <button
-            class="rounded-full px-3 py-1.5 text-xs font-semibold text-zinc-500"
-            type="button"
-          >
-            ID
-          </button>
-          <button
-            class="rounded-full bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-white"
-            type="button"
-          >
-            EN
-          </button>
-        </nav>
         <div
           class="flex items-center gap-2 rounded-full border border-zinc-200 bg-white/92 p-1.5 shadow-sm backdrop-blur-xl"
         >
@@ -780,27 +759,23 @@ exports[`PortfolioPage matches the closed modal snapshot after escape 1`] = `
         <div
           class="flex items-center gap-2"
         >
-          <div
-            class="sm:flex hidden"
+          <nav
+            aria-label="Select language"
+            class="mr-2 inline-flex rounded-full border border-zinc-200 bg-white p-1 shadow-sm"
           >
-            <nav
-              aria-label="Select language"
-              class="mr-2 inline-flex rounded-full border border-zinc-200 bg-white p-1 shadow-sm"
+            <button
+              class="rounded-full px-3 py-1.5 text-xs font-semibold text-zinc-500"
+              type="button"
             >
-              <button
-                class="rounded-full px-3 py-1.5 text-xs font-semibold text-zinc-500"
-                type="button"
-              >
-                ID
-              </button>
-              <button
-                class="rounded-full bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-white"
-                type="button"
-              >
-                EN
-              </button>
-            </nav>
-          </div>
+              ID
+            </button>
+            <button
+              class="rounded-full bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-white"
+              type="button"
+            >
+              EN
+            </button>
+          </nav>
           <div
             class="hidden items-center gap-2 sm:flex"
           >
@@ -895,7 +870,7 @@ exports[`PortfolioPage matches the closed modal snapshot after escape 1`] = `
         </div>
       </header>
       <main
-        class="relative flex flex-1 items-center justify-center py-4 sm:py-6 lg:py-8"
+        class="relative flex flex-1 items-start justify-center py-4 sm:py-6 lg:py-8"
       >
         <div
           animate="[object Object]"
@@ -1279,28 +1254,11 @@ exports[`PortfolioPage matches the closed modal snapshot after escape 1`] = `
       </main>
     </div>
     <div
-      class="fixed inset-x-0 bottom-5 z-40 flex justify-center px-4 sm:hidden"
+      class="pointer-events-none fixed inset-x-0 bottom-5 z-40 flex justify-center px-4 sm:hidden"
     >
       <div
-        class="flex flex-col items-center gap-3"
+        class="pointer-events-auto"
       >
-        <nav
-          aria-label="Select language"
-          class="mr-2 inline-flex rounded-full border border-zinc-200 bg-white p-1 shadow-sm"
-        >
-          <button
-            class="rounded-full px-3 py-1.5 text-xs font-semibold text-zinc-500"
-            type="button"
-          >
-            ID
-          </button>
-          <button
-            class="rounded-full bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-white"
-            type="button"
-          >
-            EN
-          </button>
-        </nav>
         <div
           class="flex items-center gap-2 rounded-full border border-zinc-200 bg-white/92 p-1.5 shadow-sm backdrop-blur-xl"
         >
@@ -1439,27 +1397,23 @@ exports[`PortfolioPage matches the contact modal snapshot 1`] = `
         <div
           class="flex items-center gap-2"
         >
-          <div
-            class="sm:flex hidden"
+          <nav
+            aria-label="Select language"
+            class="mr-2 inline-flex rounded-full border border-zinc-200 bg-white p-1 shadow-sm"
           >
-            <nav
-              aria-label="Select language"
-              class="mr-2 inline-flex rounded-full border border-zinc-200 bg-white p-1 shadow-sm"
+            <button
+              class="rounded-full px-3 py-1.5 text-xs font-semibold text-zinc-500"
+              type="button"
             >
-              <button
-                class="rounded-full px-3 py-1.5 text-xs font-semibold text-zinc-500"
-                type="button"
-              >
-                ID
-              </button>
-              <button
-                class="rounded-full bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-white"
-                type="button"
-              >
-                EN
-              </button>
-            </nav>
-          </div>
+              ID
+            </button>
+            <button
+              class="rounded-full bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-white"
+              type="button"
+            >
+              EN
+            </button>
+          </nav>
           <div
             class="hidden items-center gap-2 sm:flex"
           >
@@ -1554,7 +1508,7 @@ exports[`PortfolioPage matches the contact modal snapshot 1`] = `
         </div>
       </header>
       <main
-        class="relative flex flex-1 items-center justify-center py-4 sm:py-6 lg:py-8"
+        class="relative flex flex-1 items-start justify-center py-4 sm:py-6 lg:py-8"
       >
         <div
           animate="[object Object]"
@@ -1938,28 +1892,11 @@ exports[`PortfolioPage matches the contact modal snapshot 1`] = `
       </main>
     </div>
     <div
-      class="fixed inset-x-0 bottom-5 z-40 flex justify-center px-4 sm:hidden"
+      class="pointer-events-none fixed inset-x-0 bottom-5 z-40 flex justify-center px-4 sm:hidden"
     >
       <div
-        class="flex flex-col items-center gap-3"
+        class="pointer-events-auto"
       >
-        <nav
-          aria-label="Select language"
-          class="mr-2 inline-flex rounded-full border border-zinc-200 bg-white p-1 shadow-sm"
-        >
-          <button
-            class="rounded-full px-3 py-1.5 text-xs font-semibold text-zinc-500"
-            type="button"
-          >
-            ID
-          </button>
-          <button
-            class="rounded-full bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-white"
-            type="button"
-          >
-            EN
-          </button>
-        </nav>
         <div
           class="flex items-center gap-2 rounded-full border border-zinc-200 bg-white/92 p-1.5 shadow-sm backdrop-blur-xl"
         >
@@ -2218,27 +2155,23 @@ exports[`PortfolioPage matches the experience modal snapshot 1`] = `
         <div
           class="flex items-center gap-2"
         >
-          <div
-            class="sm:flex hidden"
+          <nav
+            aria-label="Select language"
+            class="mr-2 inline-flex rounded-full border border-zinc-200 bg-white p-1 shadow-sm"
           >
-            <nav
-              aria-label="Select language"
-              class="mr-2 inline-flex rounded-full border border-zinc-200 bg-white p-1 shadow-sm"
+            <button
+              class="rounded-full px-3 py-1.5 text-xs font-semibold text-zinc-500"
+              type="button"
             >
-              <button
-                class="rounded-full px-3 py-1.5 text-xs font-semibold text-zinc-500"
-                type="button"
-              >
-                ID
-              </button>
-              <button
-                class="rounded-full bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-white"
-                type="button"
-              >
-                EN
-              </button>
-            </nav>
-          </div>
+              ID
+            </button>
+            <button
+              class="rounded-full bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-white"
+              type="button"
+            >
+              EN
+            </button>
+          </nav>
           <div
             class="hidden items-center gap-2 sm:flex"
           >
@@ -2333,7 +2266,7 @@ exports[`PortfolioPage matches the experience modal snapshot 1`] = `
         </div>
       </header>
       <main
-        class="relative flex flex-1 items-center justify-center py-4 sm:py-6 lg:py-8"
+        class="relative flex flex-1 items-start justify-center py-4 sm:py-6 lg:py-8"
       >
         <div
           animate="[object Object]"
@@ -2717,28 +2650,11 @@ exports[`PortfolioPage matches the experience modal snapshot 1`] = `
       </main>
     </div>
     <div
-      class="fixed inset-x-0 bottom-5 z-40 flex justify-center px-4 sm:hidden"
+      class="pointer-events-none fixed inset-x-0 bottom-5 z-40 flex justify-center px-4 sm:hidden"
     >
       <div
-        class="flex flex-col items-center gap-3"
+        class="pointer-events-auto"
       >
-        <nav
-          aria-label="Select language"
-          class="mr-2 inline-flex rounded-full border border-zinc-200 bg-white p-1 shadow-sm"
-        >
-          <button
-            class="rounded-full px-3 py-1.5 text-xs font-semibold text-zinc-500"
-            type="button"
-          >
-            ID
-          </button>
-          <button
-            class="rounded-full bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-white"
-            type="button"
-          >
-            EN
-          </button>
-        </nav>
         <div
           class="flex items-center gap-2 rounded-full border border-zinc-200 bg-white/92 p-1.5 shadow-sm backdrop-blur-xl"
         >
@@ -2989,27 +2905,23 @@ exports[`PortfolioPage matches the indonesian snapshot 1`] = `
         <div
           class="flex items-center gap-2"
         >
-          <div
-            class="sm:flex hidden"
+          <nav
+            aria-label="Pilih bahasa"
+            class="mr-2 inline-flex rounded-full border border-zinc-200 bg-white p-1 shadow-sm"
           >
-            <nav
-              aria-label="Pilih bahasa"
-              class="mr-2 inline-flex rounded-full border border-zinc-200 bg-white p-1 shadow-sm"
+            <button
+              class="rounded-full bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-white"
+              type="button"
             >
-              <button
-                class="rounded-full bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-white"
-                type="button"
-              >
-                ID
-              </button>
-              <button
-                class="rounded-full px-3 py-1.5 text-xs font-semibold text-zinc-500"
-                type="button"
-              >
-                EN
-              </button>
-            </nav>
-          </div>
+              ID
+            </button>
+            <button
+              class="rounded-full px-3 py-1.5 text-xs font-semibold text-zinc-500"
+              type="button"
+            >
+              EN
+            </button>
+          </nav>
           <div
             class="hidden items-center gap-2 sm:flex"
           >
@@ -3104,7 +3016,7 @@ exports[`PortfolioPage matches the indonesian snapshot 1`] = `
         </div>
       </header>
       <main
-        class="relative flex flex-1 items-center justify-center py-4 sm:py-6 lg:py-8"
+        class="relative flex flex-1 items-start justify-center py-4 sm:py-6 lg:py-8"
       >
         <div
           animate="[object Object]"
@@ -3488,28 +3400,11 @@ exports[`PortfolioPage matches the indonesian snapshot 1`] = `
       </main>
     </div>
     <div
-      class="fixed inset-x-0 bottom-5 z-40 flex justify-center px-4 sm:hidden"
+      class="pointer-events-none fixed inset-x-0 bottom-5 z-40 flex justify-center px-4 sm:hidden"
     >
       <div
-        class="flex flex-col items-center gap-3"
+        class="pointer-events-auto"
       >
-        <nav
-          aria-label="Pilih bahasa"
-          class="mr-2 inline-flex rounded-full border border-zinc-200 bg-white p-1 shadow-sm"
-        >
-          <button
-            class="rounded-full bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-white"
-            type="button"
-          >
-            ID
-          </button>
-          <button
-            class="rounded-full px-3 py-1.5 text-xs font-semibold text-zinc-500"
-            type="button"
-          >
-            EN
-          </button>
-        </nav>
         <div
           class="flex items-center gap-2 rounded-full border border-zinc-200 bg-white/92 p-1.5 shadow-sm backdrop-blur-xl"
         >
@@ -3648,27 +3543,23 @@ exports[`PortfolioPage matches the initial english snapshot 1`] = `
         <div
           class="flex items-center gap-2"
         >
-          <div
-            class="sm:flex hidden"
+          <nav
+            aria-label="Select language"
+            class="mr-2 inline-flex rounded-full border border-zinc-200 bg-white p-1 shadow-sm"
           >
-            <nav
-              aria-label="Select language"
-              class="mr-2 inline-flex rounded-full border border-zinc-200 bg-white p-1 shadow-sm"
+            <button
+              class="rounded-full px-3 py-1.5 text-xs font-semibold text-zinc-500"
+              type="button"
             >
-              <button
-                class="rounded-full px-3 py-1.5 text-xs font-semibold text-zinc-500"
-                type="button"
-              >
-                ID
-              </button>
-              <button
-                class="rounded-full bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-white"
-                type="button"
-              >
-                EN
-              </button>
-            </nav>
-          </div>
+              ID
+            </button>
+            <button
+              class="rounded-full bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-white"
+              type="button"
+            >
+              EN
+            </button>
+          </nav>
           <div
             class="hidden items-center gap-2 sm:flex"
           >
@@ -3763,7 +3654,7 @@ exports[`PortfolioPage matches the initial english snapshot 1`] = `
         </div>
       </header>
       <main
-        class="relative flex flex-1 items-center justify-center py-4 sm:py-6 lg:py-8"
+        class="relative flex flex-1 items-start justify-center py-4 sm:py-6 lg:py-8"
       >
         <div
           animate="[object Object]"
@@ -4147,28 +4038,11 @@ exports[`PortfolioPage matches the initial english snapshot 1`] = `
       </main>
     </div>
     <div
-      class="fixed inset-x-0 bottom-5 z-40 flex justify-center px-4 sm:hidden"
+      class="pointer-events-none fixed inset-x-0 bottom-5 z-40 flex justify-center px-4 sm:hidden"
     >
       <div
-        class="flex flex-col items-center gap-3"
+        class="pointer-events-auto"
       >
-        <nav
-          aria-label="Select language"
-          class="mr-2 inline-flex rounded-full border border-zinc-200 bg-white p-1 shadow-sm"
-        >
-          <button
-            class="rounded-full px-3 py-1.5 text-xs font-semibold text-zinc-500"
-            type="button"
-          >
-            ID
-          </button>
-          <button
-            class="rounded-full bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-white"
-            type="button"
-          >
-            EN
-          </button>
-        </nav>
         <div
           class="flex items-center gap-2 rounded-full border border-zinc-200 bg-white/92 p-1.5 shadow-sm backdrop-blur-xl"
         >
@@ -4307,27 +4181,23 @@ exports[`PortfolioPage matches the projects modal snapshot 1`] = `
         <div
           class="flex items-center gap-2"
         >
-          <div
-            class="sm:flex hidden"
+          <nav
+            aria-label="Select language"
+            class="mr-2 inline-flex rounded-full border border-zinc-200 bg-white p-1 shadow-sm"
           >
-            <nav
-              aria-label="Select language"
-              class="mr-2 inline-flex rounded-full border border-zinc-200 bg-white p-1 shadow-sm"
+            <button
+              class="rounded-full px-3 py-1.5 text-xs font-semibold text-zinc-500"
+              type="button"
             >
-              <button
-                class="rounded-full px-3 py-1.5 text-xs font-semibold text-zinc-500"
-                type="button"
-              >
-                ID
-              </button>
-              <button
-                class="rounded-full bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-white"
-                type="button"
-              >
-                EN
-              </button>
-            </nav>
-          </div>
+              ID
+            </button>
+            <button
+              class="rounded-full bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-white"
+              type="button"
+            >
+              EN
+            </button>
+          </nav>
           <div
             class="hidden items-center gap-2 sm:flex"
           >
@@ -4422,7 +4292,7 @@ exports[`PortfolioPage matches the projects modal snapshot 1`] = `
         </div>
       </header>
       <main
-        class="relative flex flex-1 items-center justify-center py-4 sm:py-6 lg:py-8"
+        class="relative flex flex-1 items-start justify-center py-4 sm:py-6 lg:py-8"
       >
         <div
           animate="[object Object]"
@@ -4806,28 +4676,11 @@ exports[`PortfolioPage matches the projects modal snapshot 1`] = `
       </main>
     </div>
     <div
-      class="fixed inset-x-0 bottom-5 z-40 flex justify-center px-4 sm:hidden"
+      class="pointer-events-none fixed inset-x-0 bottom-5 z-40 flex justify-center px-4 sm:hidden"
     >
       <div
-        class="flex flex-col items-center gap-3"
+        class="pointer-events-auto"
       >
-        <nav
-          aria-label="Select language"
-          class="mr-2 inline-flex rounded-full border border-zinc-200 bg-white p-1 shadow-sm"
-        >
-          <button
-            class="rounded-full px-3 py-1.5 text-xs font-semibold text-zinc-500"
-            type="button"
-          >
-            ID
-          </button>
-          <button
-            class="rounded-full bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-white"
-            type="button"
-          >
-            EN
-          </button>
-        </nav>
         <div
           class="flex items-center gap-2 rounded-full border border-zinc-200 bg-white/92 p-1.5 shadow-sm backdrop-blur-xl"
         >
@@ -5306,27 +5159,23 @@ exports[`PortfolioPage matches the skills modal snapshot 1`] = `
         <div
           class="flex items-center gap-2"
         >
-          <div
-            class="sm:flex hidden"
+          <nav
+            aria-label="Select language"
+            class="mr-2 inline-flex rounded-full border border-zinc-200 bg-white p-1 shadow-sm"
           >
-            <nav
-              aria-label="Select language"
-              class="mr-2 inline-flex rounded-full border border-zinc-200 bg-white p-1 shadow-sm"
+            <button
+              class="rounded-full px-3 py-1.5 text-xs font-semibold text-zinc-500"
+              type="button"
             >
-              <button
-                class="rounded-full px-3 py-1.5 text-xs font-semibold text-zinc-500"
-                type="button"
-              >
-                ID
-              </button>
-              <button
-                class="rounded-full bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-white"
-                type="button"
-              >
-                EN
-              </button>
-            </nav>
-          </div>
+              ID
+            </button>
+            <button
+              class="rounded-full bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-white"
+              type="button"
+            >
+              EN
+            </button>
+          </nav>
           <div
             class="hidden items-center gap-2 sm:flex"
           >
@@ -5421,7 +5270,7 @@ exports[`PortfolioPage matches the skills modal snapshot 1`] = `
         </div>
       </header>
       <main
-        class="relative flex flex-1 items-center justify-center py-4 sm:py-6 lg:py-8"
+        class="relative flex flex-1 items-start justify-center py-4 sm:py-6 lg:py-8"
       >
         <div
           animate="[object Object]"
@@ -5805,28 +5654,11 @@ exports[`PortfolioPage matches the skills modal snapshot 1`] = `
       </main>
     </div>
     <div
-      class="fixed inset-x-0 bottom-5 z-40 flex justify-center px-4 sm:hidden"
+      class="pointer-events-none fixed inset-x-0 bottom-5 z-40 flex justify-center px-4 sm:hidden"
     >
       <div
-        class="flex flex-col items-center gap-3"
+        class="pointer-events-auto"
       >
-        <nav
-          aria-label="Select language"
-          class="mr-2 inline-flex rounded-full border border-zinc-200 bg-white p-1 shadow-sm"
-        >
-          <button
-            class="rounded-full px-3 py-1.5 text-xs font-semibold text-zinc-500"
-            type="button"
-          >
-            ID
-          </button>
-          <button
-            class="rounded-full bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-white"
-            type="button"
-          >
-            EN
-          </button>
-        </nav>
         <div
           class="flex items-center gap-2 rounded-full border border-zinc-200 bg-white/92 p-1.5 shadow-sm backdrop-blur-xl"
         >

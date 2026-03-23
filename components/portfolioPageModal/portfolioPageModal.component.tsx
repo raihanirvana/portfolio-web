@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 
 import { AnimatePresence, m, useReducedMotion, type Transition } from "framer-motion";
-import { ExternalLink, X } from "@/components/portfolio/portfolioIcons.component";
+import { ExternalLink, X } from "@/components/portfolioIcons/portfolioIcons.component";
 
 import type { PortfolioDictionary } from "@/content/locales/types";
 import {
@@ -11,7 +11,7 @@ import {
   type ModalItem,
   type ModalKey,
   type ModalProps,
-} from "@/components/portfolio/portfolioPage.type.component";
+} from "@/components/portfolioPage/portfolioPage.type.component";
 
 const portfolioDialogId = "portfolio-modal";
 

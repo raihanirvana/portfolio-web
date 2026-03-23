@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`portfolioHighlights.component matches the highlights column snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="order-3 flex flex-col gap-4 lg:justify-center"
+  >
+    <div
+      class="rounded-[1.75rem] border border-zinc-200/90 bg-white/90 p-5 shadow-sm"
+    >
+      <p
+        class="text-[10px] uppercase tracking-[0.24em] text-zinc-400"
+      >
+        Highlights
+      </p>
+      <div
+        class="mt-4 space-y-3"
+      >
+        <div
+          class="rounded-[1.2rem] bg-zinc-100 px-4 py-3 text-sm font-medium text-zinc-800 transition hover:bg-zinc-200/80"
+        >
+          3+ years experience
+        </div>
+        <div
+          class="rounded-[1.2rem] bg-zinc-100 px-4 py-3 text-sm font-medium text-zinc-800 transition hover:bg-zinc-200/80"
+        >
+          JavaScript ecosystem
+        </div>
+        <div
+          class="rounded-[1.2rem] bg-zinc-100 px-4 py-3 text-sm font-medium text-zinc-800 transition hover:bg-zinc-200/80"
+        >
+          Open to remote
+        </div>
+        <div
+          class="rounded-[1.2rem] bg-zinc-100 px-4 py-3 text-sm font-medium text-zinc-800 transition hover:bg-zinc-200/80"
+        >
+          End-to-end fullstack
+        </div>
+      </div>
+    </div>
+    <a
+      class="inline-flex items-center justify-between rounded-[1.75rem] border border-zinc-200 bg-white px-5 py-4 text-sm font-medium text-zinc-900 shadow-sm transition hover:border-zinc-300 hover:bg-zinc-50"
+      download="Raihan_Irvana_CV.pdf"
+      href="/cv/Raihan_Irvana_CV.pdf"
+    >
+      <span
+        class="inline-flex items-center gap-2"
+      >
+        <svg
+          aria-hidden="true"
+          class="h-4 w-4"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+          />
+          <path
+            d="M14 2v6h6"
+          />
+          <path
+            d="M16 13H8"
+          />
+          <path
+            d="M16 17H8"
+          />
+          <path
+            d="M10 9H8"
+          />
+        </svg>
+        Download CV
+      </span>
+      <svg
+        aria-hidden="true"
+        class="h-4 w-4 opacity-70"
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 17 17 7"
+        />
+        <path
+          d="M7 7h10v10"
+        />
+      </svg>
+    </a>
+  </div>
+</DocumentFragment>
+`;
