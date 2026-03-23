@@ -2,6 +2,7 @@ import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 import { FlatCompat } from "@eslint/eslintrc";
+import tseslint from "@typescript-eslint/eslint-plugin";
 import jsdoc from "eslint-plugin-jsdoc";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -54,8 +55,37 @@ const config = [
     },
   },
   {
+    files: ["**/*.{ts,tsx}"],
+    plugins: {
+      "@typescript-eslint": tseslint,
+    },
+    rules: {
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          argsIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
+        },
+      ],
+    },
+  },
+  {
+    files: ["**/*.{js,jsx}"],
+    rules: {
+      "no-unused-vars": [
+        "error",
+        {
+          argsIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
+        },
+      ],
+    },
+  },
+  {
     files: ["**/*.test.{js,jsx,ts,tsx}", "**/jest.setup.{js,ts}"],
     rules: {
+      "@typescript-eslint/no-unused-vars": "off",
       "jsdoc/require-jsdoc": "off",
       "max-lines-per-function": "off",
     },

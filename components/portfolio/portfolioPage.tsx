@@ -180,7 +180,7 @@ function renderPortfolioShell(actions: ActionItem[], content: PortfolioDictionar
           <PortfolioHeader content={content} locale={locale} onLocaleChange={setLocale} />
           <PortfolioMain actions={actions} content={content} onOpen={setOpenKey} openKey={openKey} />
         </div>
-        <FloatingLocaleSwitcher content={content} locale={locale} onLocaleChange={setLocale} />
+        <FloatingLocaleSwitcher content={content} />
         {openKey ? <PortfolioModal content={content} onClose={() => setOpenKey(null)} openKey={openKey} /> : null}
       </LazyMotion>
     </div>
@@ -256,33 +256,23 @@ function HeaderActions({
 }) {
   return (
     <div className="flex items-center gap-2">
-      <div className="sm:flex hidden">
-        <LocaleSwitcher label={content.localeSwitcher.label} locale={locale} onLocaleChange={onLocaleChange} />
-      </div>
+      <LocaleSwitcher label={content.localeSwitcher.label} locale={locale} onLocaleChange={onLocaleChange} />
       <DesktopSocialLinks content={content} />
     </div>
   );
 }
 
 /**
- * Renders the floating locale switcher for very small screens.
+ * Renders the floating social links for very small screens.
  */
 function FloatingLocaleSwitcher({
   content,
-  locale,
-  onLocaleChange,
 }: {
   content: PortfolioDictionary;
-  locale: Locale;
-  onLocaleChange: (locale: Locale) => void;
 }) {
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-5 z-40 flex justify-center px-4 sm:hidden">
-      <FloatingLocaleContent
-        content={content}
-        locale={locale}
-        onLocaleChange={onLocaleChange}
-      />
+      <FloatingLocaleContent content={content} />
     </div>
   );
 }
@@ -292,20 +282,11 @@ function FloatingLocaleSwitcher({
  */
 function FloatingLocaleContent({
   content,
-  locale,
-  onLocaleChange,
 }: {
   content: PortfolioDictionary;
-  locale: Locale;
-  onLocaleChange: (locale: Locale) => void;
 }) {
   return (
-    <div className="pointer-events-auto flex flex-col items-center gap-3">
-      <LocaleSwitcher
-        label={content.localeSwitcher.label}
-        locale={locale}
-        onLocaleChange={onLocaleChange}
-      />
+    <div className="pointer-events-auto">
       <MobileSocialLinks content={content} />
     </div>
   );
