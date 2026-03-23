@@ -180,6 +180,7 @@ function renderPortfolioShell(actions: ActionItem[], content: PortfolioDictionar
           <PortfolioHeader content={content} locale={locale} onLocaleChange={setLocale} />
           <PortfolioMain actions={actions} content={content} onOpen={setOpenKey} openKey={openKey} />
         </div>
+        <FloatingLocaleSwitcher content={content} locale={locale} onLocaleChange={setLocale} />
         {openKey ? <PortfolioModal content={content} onClose={() => setOpenKey(null)} openKey={openKey} /> : null}
       </LazyMotion>
     </div>
@@ -255,11 +256,93 @@ function HeaderActions({
 }) {
   return (
     <div className="flex items-center gap-2">
-      <LocaleSwitcher label={content.localeSwitcher.label} locale={locale} onLocaleChange={onLocaleChange} />
+      <div className="sm:flex hidden">
+        <LocaleSwitcher label={content.localeSwitcher.label} locale={locale} onLocaleChange={onLocaleChange} />
+      </div>
+      <DesktopSocialLinks content={content} />
+    </div>
+  );
+}
+
+/**
+ * Renders the floating locale switcher for very small screens.
+ */
+function FloatingLocaleSwitcher({
+  content,
+  locale,
+  onLocaleChange,
+}: {
+  content: PortfolioDictionary;
+  locale: Locale;
+  onLocaleChange: (locale: Locale) => void;
+}) {
+  return (
+    <div className="fixed inset-x-0 bottom-5 z-40 flex justify-center px-4 sm:hidden">
+      <FloatingLocaleContent
+        content={content}
+        locale={locale}
+        onLocaleChange={onLocaleChange}
+      />
+    </div>
+  );
+}
+
+/**
+ * Renders the content inside the floating locale switcher.
+ */
+function FloatingLocaleContent({
+  content,
+  locale,
+  onLocaleChange,
+}: {
+  content: PortfolioDictionary;
+  locale: Locale;
+  onLocaleChange: (locale: Locale) => void;
+}) {
+  return (
+    <div className="flex flex-col items-center gap-3">
+      <LocaleSwitcher
+        label={content.localeSwitcher.label}
+        locale={locale}
+        onLocaleChange={onLocaleChange}
+      />
+      <MobileSocialLinks content={content} />
+    </div>
+  );
+}
+
+/**
+ * Renders the desktop social link group.
+ */
+function DesktopSocialLinks({ content }: { content: PortfolioDictionary }) {
+  return (
+    <div className="hidden items-center gap-2 sm:flex">
+      <SocialLinks content={content} />
+    </div>
+  );
+}
+
+/**
+ * Renders the mobile floating social link group.
+ */
+function MobileSocialLinks({ content }: { content: PortfolioDictionary }) {
+  return (
+    <div className="flex items-center gap-2 rounded-full border border-zinc-200 bg-white/92 p-1.5 shadow-sm backdrop-blur-xl">
+      <SocialLinks content={content} />
+    </div>
+  );
+}
+
+/**
+ * Renders the shared social links.
+ */
+function SocialLinks({ content }: { content: PortfolioDictionary }) {
+  return (
+    <>
       <PortfolioLink ariaLabel="GitHub" href={content.socials.github} icon={<Github className="h-4 w-4" />} />
       <PortfolioLink ariaLabel="LinkedIn" href={content.socials.linkedin} icon={<Linkedin className="h-4 w-4" />} />
       <PortfolioLink ariaLabel="Email" href={content.socials.email} icon={<Mail className="h-4 w-4" />} />
-    </div>
+    </>
   );
 }
 
