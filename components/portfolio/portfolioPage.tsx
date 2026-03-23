@@ -27,7 +27,6 @@ import type { PortfolioDictionary } from "@/content/locales/types";
 import {
   type ActionButtonProps,
   type ActionItem,
-  type DialogTriggerButtonProps,
   type HeroCtaButtonProps,
   type LocaleButtonProps,
   type LocaleSwitcherProps,
@@ -81,65 +80,6 @@ function getActionItems(content: PortfolioDictionary): ActionItem[] {
   ];
 }
 
-
-/**
- * Renders mobile action cards from the action list.
- */
-function renderMobileActions(
-  actions: ActionItem[],
-  onClick: (key: ModalKey) => void,
-  openKey: ModalKey | null,
-) {
-  return actions.map((item) => (
-    <MobileActionCard
-      isActive={openKey === item.key}
-      item={item}
-      key={item.key}
-      onClick={onClick}
-    />
-  ));
-}
-
-/**
- * Renders one mobile action card.
- */
-function MobileActionCard({
-  isActive,
-  item,
-  onClick,
-}: {
-  isActive: boolean;
-  item: ActionItem;
-  onClick: (key: ModalKey) => void;
-}) {
-  return (
-    <MobileActionButton isActive={isActive} item={item} onClick={onClick}>
-      <MobileActionContent item={item} />
-    </MobileActionButton>
-  );
-}
-
-/**
- * Renders the interactive shell for one mobile action.
- */
-function MobileActionButton({ children, isActive, item, onClick }: DialogTriggerButtonProps & {
-  item: ActionItem;
-  onClick: (key: ModalKey) => void;
-}) {
-  const dialogProps = getDialogTriggerProps(isActive);
-
-  return (
-    <button
-      {...dialogProps}
-      className="rounded-[1.4rem] border border-white/70 bg-white/76 px-4 py-3.5 text-left shadow-sm backdrop-blur-xl transition active:scale-[0.99]"
-      onClick={() => onClick(item.key)}
-      type="button"
-    >
-      {children}
-    </button>
-  );
-}
-
 /**
  * Returns dialog trigger attributes for modal-opening controls.
  */
@@ -154,18 +94,6 @@ function getDialogTriggerProps(isActive: boolean) {
 /**
  * Renders the mobile action icon and label.
  */
-function MobileActionContent({ item }: { item: ActionItem }) {
-  const Icon = item.icon;
-
-  return (
-    <div className="flex items-center gap-2 text-zinc-900">
-      <Icon className="h-4 w-4" />
-      <span className="text-sm font-medium">{item.label}</span>
-    </div>
-  );
-}
-
-
 /**
  * Renders one hero action pill.
  */
@@ -251,7 +179,6 @@ function renderPortfolioShell(actions: ActionItem[], content: PortfolioDictionar
         <div className={shellClassName}>
           <PortfolioHeader content={content} locale={locale} onLocaleChange={setLocale} />
           <PortfolioMain actions={actions} content={content} onOpen={setOpenKey} openKey={openKey} />
-          <PortfolioMobile actions={actions} onOpen={setOpenKey} openKey={openKey} />
         </div>
         {openKey ? <PortfolioModal content={content} onClose={() => setOpenKey(null)} openKey={openKey} /> : null}
       </LazyMotion>
@@ -370,27 +297,6 @@ function PortfolioGlow() {
       <div className="absolute left-1/2 top-0 h-64 w-64 -translate-x-1/2 rounded-full bg-zinc-200/55 blur-3xl" />
       <div className="absolute bottom-0 right-0 h-44 w-44 rounded-full bg-zinc-200/40 blur-3xl" />
     </>
-  );
-}
-
-/**
- * Renders the mobile-only action grid.
- */
-function PortfolioMobile({
-  actions,
-  openKey,
-  onOpen,
-}: {
-  actions: ActionItem[];
-  onOpen: (key: ModalKey) => void;
-  openKey: ModalKey | null;
-}) {
-  return (
-    <div className="mt-4 grid gap-3 lg:hidden">
-      <div className="grid grid-cols-2 gap-3 pb-1">
-        {renderMobileActions(actions, onOpen, openKey)}
-      </div>
-    </div>
   );
 }
 
