@@ -8,6 +8,60 @@ import { defaultLocale, locales, type Locale } from "@/lib/locales";
 const localeStorageKey = "porto-web-locale";
 
 /**
+ * Returns the existing description meta tag or creates one.
+ */
+function getDescriptionMetaTag() {
+  const existingMetaTag = document.querySelector('meta[name="description"]');
+
+  if (existingMetaTag) return existingMetaTag;
+  const metaTag = document.createElement("meta");
+
+  metaTag.setAttribute("name", "description");
+  document.head.appendChild(metaTag);
+
+  return metaTag;
+}
+
+/**
+ * Creates or updates the page description meta tag.
+ */
+function updateMetaDescription(description: string) {
+  const metaTag = getDescriptionMetaTag();
+
+  metaTag.setAttribute("content", description);
+}
+
+/**
+ * Loads one locale dictionary and applies it if the component is mounted.
+ */
+async function loadLocaleContent(
+  locale: Locale,
+  setContent: (content: PortfolioDictionary) => void,
+  isMounted: () => boolean,
+) {
+  const { loadDictionary } = await import("@/lib/locales");
+  const nextContent = await loadDictionary(locale);
+
+  if (isMounted()) setContent(nextContent);
+}
+
+/**
+ * Syncs the active locale dictionary into component state.
+ */
+function syncLocaleContent(
+  locale: Locale,
+  setContent: (content: PortfolioDictionary) => void,
+) {
+  let isMounted = true;
+
+  void loadLocaleContent(locale, setContent, () => isMounted);
+
+  return () => {
+    isMounted = false;
+  };
+}
+
+/**
  * Persists and restores the selected portfolio locale.
  */
 export function usePortfolioLocale() {
@@ -59,58 +113,4 @@ export function usePortfolioContent(
   }, [initialContent, locale]);
 
   return content;
-}
-
-/**
- * Syncs the active locale dictionary into component state.
- */
-function syncLocaleContent(
-  locale: Locale,
-  setContent: (content: PortfolioDictionary) => void,
-) {
-  let isMounted = true;
-
-  void loadLocaleContent(locale, setContent, () => isMounted);
-
-  return () => {
-    isMounted = false;
-  };
-}
-
-/**
- * Loads one locale dictionary and applies it if the component is mounted.
- */
-async function loadLocaleContent(
-  locale: Locale,
-  setContent: (content: PortfolioDictionary) => void,
-  isMounted: () => boolean,
-) {
-  const { loadDictionary } = await import("@/lib/locales");
-  const nextContent = await loadDictionary(locale);
-
-  if (isMounted()) setContent(nextContent);
-}
-
-/**
- * Creates or updates the page description meta tag.
- */
-function updateMetaDescription(description: string) {
-  const metaTag = getDescriptionMetaTag();
-
-  metaTag.setAttribute("content", description);
-}
-
-/**
- * Returns the existing description meta tag or creates one.
- */
-function getDescriptionMetaTag() {
-  const existingMetaTag = document.querySelector('meta[name="description"]');
-
-  if (existingMetaTag) return existingMetaTag;
-  const metaTag = document.createElement("meta");
-
-  metaTag.setAttribute("name", "description");
-  document.head.appendChild(metaTag);
-
-  return metaTag;
 }
