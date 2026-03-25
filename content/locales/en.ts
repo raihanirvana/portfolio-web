@@ -22,6 +22,7 @@ export const enDictionary: PortfolioDictionary = {
   contact: {
     cards: [
       { href: "mailto:raihanirvana13@gmail.com", label: "Email", value: "raihanirvana13@gmail.com" },
+      { href: "https://wa.me/+6285856914478", label: "WhatsApp", value: "+62 858-5691-4478" },
       { href: "https://linkedin.com/in/raihanirvana", label: "LinkedIn", value: "linkedin.com/in/raihanirvana" },
       { href: "https://github.com/raihanirvana", label: "GitHub", value: "github.com/raihanirvana" },
     ],
@@ -88,6 +89,23 @@ export const enDictionary: PortfolioDictionary = {
   projects: {
     items: [
       {
+        desc: "A marketplace web application for buying and selling game accounts, built with a modern frontend stack and flows for listings, discovery, and account transactions.",
+        links: [
+          { href: "https://github.com/accarena07/account-arena", label: "Frontend" },
+          { href: "https://github.com/accarena07/account-arena", label: "Backend" },
+        ],
+        name: "Account Arena",
+        stack: "Next.js · Tailwind",
+      },
+      {
+        desc: "A personal portfolio website built to present profile, experience, selected projects, and contact information through a polished bilingual interface.",
+        links: [
+          { href: "https://github.com/raihanirvana/portfolio-web", label: "Frontend" },
+        ],
+        name: "Portfolio Web",
+        stack: "Next.js · Tailwind",
+      },
+      {
         desc: "A movie ticket booking platform built in a team environment, covering booking flows, authentication, and transaction journeys across the full stack.",
         links: [
           { href: "https://github.com/raihanirvana/TICKETING-FE", label: "Frontend" },
@@ -135,5 +153,6 @@ export const enDictionary: PortfolioDictionary = {
     email: "mailto:raihanirvana13@gmail.com",
     github: "https://github.com/raihanirvana",
     linkedin: "https://linkedin.com/in/raihanirvana",
+    whatsapp: "https://wa.me/+6285856914478",
   },
 };

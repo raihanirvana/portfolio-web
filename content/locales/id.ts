@@ -27,6 +27,11 @@ export const idDictionary: PortfolioDictionary = {
         value: "raihanirvana13@gmail.com",
       },
       {
+        href: "https://wa.me/+6285856914478",
+        label: "WhatsApp",
+        value: "+62 858-5691-4478",
+      },
+      {
         href: "https://linkedin.com/in/raihanirvana",
         label: "LinkedIn",
         value: "linkedin.com/in/raihanirvana",
@@ -104,6 +109,32 @@ export const idDictionary: PortfolioDictionary = {
 
   projects: {
     items: [
+      {
+        desc: "Aplikasi web marketplace untuk jual beli akun game, dibangun dengan stack frontend modern dan alur untuk listing, discovery, serta transaksi akun.",
+        links: [
+          {
+            href: "https://github.com/accarena07/account-arena",
+            label: "Frontend",
+          },
+          {
+            href: "https://github.com/accarena07/account-arena",
+            label: "Backend",
+          },
+        ],
+        name: "Account Arena",
+        stack: "Next.js · Tailwind",
+      },
+      {
+        desc: "Website portofolio personal yang dibuat untuk menampilkan profil, pengalaman, proyek pilihan, dan informasi kontak melalui antarmuka bilingual yang polished.",
+        links: [
+          {
+            href: "https://github.com/raihanirvana/portfolio-web",
+            label: "Frontend",
+          },
+        ],
+        name: "Portfolio Web",
+        stack: "Next.js · Tailwind",
+      },
       {
         desc: "Platform pemesanan tiket film yang dikembangkan dalam setup tim, mencakup alur booking, authentication, dan transaction journey secara fullstack.",
         links: [
@@ -185,5 +216,6 @@ export const idDictionary: PortfolioDictionary = {
     email: "mailto:raihanirvana13@gmail.com",
     github: "https://github.com/raihanirvana",
     linkedin: "https://linkedin.com/in/raihanirvana",
+    whatsapp: "https://wa.me/+6285856914478",
   },
 };

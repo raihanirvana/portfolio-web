@@ -173,8 +173,12 @@ function ProjectLinks({
 }) {
   return (
     <div className="mt-4 flex flex-wrap gap-2">
-      {links.map((link) => (
-        <ProjectLink href={link.href} key={link.href} label={link.label} />
+      {links.map((link, index) => (
+        <ProjectLink
+          href={link.href}
+          key={`${link.label}-${link.href}-${String(index)}`}
+          label={link.label}
+        />
       ))}
     </div>
   );

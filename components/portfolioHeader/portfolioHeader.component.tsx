@@ -6,6 +6,7 @@ import {
   Github,
   Linkedin,
   Mail,
+  Whatsapp,
 } from "@/components/portfolioIcons/portfolioIcons.component";
 import type { PortfolioDictionary } from "@/content/locales/types";
 import {
@@ -75,6 +76,7 @@ function SocialLinks({ content }: { content: PortfolioDictionary }) {
     <>
       <PortfolioLink ariaLabel="GitHub" href={content.socials.github} icon={<Github className="h-4 w-4" />} />
       <PortfolioLink ariaLabel="LinkedIn" href={content.socials.linkedin} icon={<Linkedin className="h-4 w-4" />} />
+      <PortfolioLink ariaLabel="WhatsApp" href={content.socials.whatsapp} icon={<Whatsapp className="h-4 w-4" />} />
       <PortfolioLink ariaLabel="Email" href={content.socials.email} icon={<Mail className="h-4 w-4" />} />
     </>
   );

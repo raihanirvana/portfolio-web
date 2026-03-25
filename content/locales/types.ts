@@ -88,5 +88,6 @@ export type PortfolioDictionary = {
     email: string;
     github: string;
     linkedin: string;
+    whatsapp: string;
   };
 };

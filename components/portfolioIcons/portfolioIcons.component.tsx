@@ -114,6 +114,13 @@ export const Sparkles: IconComponent = (props) => (
   </BaseIcon>
 );
 
+export const Whatsapp: IconComponent = (props) => (
+  <BaseIcon {...props}>
+    <path d="M21 11.5A9.5 9.5 0 0 1 7.3 20L3.4 21l1.4-3.9A9.5 9.5 0 1 1 21 11.5Z" />
+    <path d="M9.9 9.4c.1-.2.3-.3.5-.3h.4c.2 0 .3 0 .4.3l.5 1.2c.1.2.1.3 0 .4l-.4.5c-.1.1-.1.2 0 .3.2.4.6.8 1 1.2.4.4.8.7 1.2.9.1.1.2.1.3 0l.5-.4c.1-.1.2-.1.4 0l1.2.5c.2.1.3.2.3.4v.4c0 .2-.1.4-.3.5-.4.2-.8.4-1.3.4-.6 0-1.3-.2-2.1-.6-.8-.4-1.5-.9-2.1-1.6-.6-.6-1.2-1.3-1.5-2-.5-.8-.7-1.5-.6-2.2 0-.4.1-.8.4-1.2Z" />
+  </BaseIcon>
+);
+
 export const User: IconComponent = (props) => (
   <BaseIcon {...props}>
     <path d="M20 21a8 8 0 0 0-16 0" />
