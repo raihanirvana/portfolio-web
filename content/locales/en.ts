@@ -57,7 +57,7 @@ export const enDictionary: PortfolioDictionary = {
   },
 
   experience: {
-    company: "PT Bank SMBC Indonesia",
+    company: "Jenius Digital Bank",
     items: [
       "Built lending journeys across credit assessment, credit limits, Flexi Cash, Pay Later, and credit cards within Jenius mobile microfrontends and backend services.",
       "Developed React Native features with Redux, Apollo GraphQL, React Hook Form, shared components, and Flow; improved responsiveness through lazy queries, memoization, and reusable hooks.",
@@ -66,7 +66,7 @@ export const enDictionary: PortfolioDictionary = {
       "Tested mobile and backend changes with Jest, React Native Testing Library, Mocha, Chai, and Sinon; supported SIT/UAT, Jenkins/OpenShift releases, and New Relic monitoring.",
       "Acting Product Owner, Feb 2025–Mar 2026, alongside engineering: prepared PRDs and acceptance criteria, refined priorities, and coordinated stakeholders, testing, and release readiness.",
     ],
-    role: "Fullstack Engineer, Jenius Digital Banking",
+    role: "Fullstack Engineer, Jenius Digital Bank",
     subtitle: "Selected professional experience",
     title: "Experience",
     year: "Aug 2023 — Present",

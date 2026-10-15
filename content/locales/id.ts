@@ -73,7 +73,7 @@ export const idDictionary: PortfolioDictionary = {
   },
 
   experience: {
-    company: "PT Bank SMBC Indonesia",
+    company: "Jenius Digital Bank",
     items: [
       "Mengembangkan fitur lending Jenius untuk pengajuan kredit, pengelolaan limit, Flexi Cash, Pay Later, dan kartu kredit pada aplikasi mobile dan layanan backend.",
       "Mengembangkan fitur React Native dengan Redux, Apollo GraphQL, React Hook Form, dan Flow. Menggunakan shared components, custom hooks, lazy queries, serta memoization.",
@@ -82,7 +82,7 @@ export const idDictionary: PortfolioDictionary = {
       "Menulis tes dengan Jest, React Native Testing Library, Mocha, Chai, dan Sinon. Mendukung SIT/UAT, deployment melalui Jenkins/OpenShift, serta monitoring dengan New Relic.",
       "Acting Product Owner (Feb 2025–Mar 2026), sekaligus engineer: menyusun PRD, backlog, dan acceptance criteria; mengoordinasikan stakeholder, SIT/UAT, dan rilis.",
     ],
-    role: "Fullstack Engineer, Jenius Digital Banking",
+    role: "Fullstack Engineer, Jenius Digital Bank",
     subtitle: "Pengalaman kerja",
     title: "Pengalaman",
     year: "Agu 2023 — Sekarang",
