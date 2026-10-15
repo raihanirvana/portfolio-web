@@ -1,6 +1,32 @@
 import type { PortfolioDictionary } from "./types";
 
 export const enDictionary: PortfolioDictionary = {
+  studio: {
+    back: "Back to overview",
+    greeting: "Hi, I’m Raihan. A fullstack engineer.",
+    availability: "Open to remote opportunities",
+    workTitle: "A few things I’ve built.",
+    workDescription: "Different products. The same care, from the first interaction to the last API call.",
+    repositories: "All repositories",
+    source: "View source",
+    illustration: "Interface illustration",
+    otherWork: "Also on my workbench",
+    experienceTitle: "Built for the everyday.",
+    aboutTitle: "An engineer with a product mindset.",
+    contactTitle: "Let’s build something that matters.",
+    contactCta: "Say hello",
+    backToTop: "Back to top",
+    skipLink: "Skip to content",
+    architecture: "One product. Every layer.",
+    layerLabel: "Explore the stack",
+    layers: [
+      { name: "Interface", detail: "Thoughtful interactions, on the web and in your hand.", tools: "React / Next.js / React Native" },
+      { name: "Services", detail: "Clear contracts. Reliable logic. Room to grow.", tools: "Node.js / Express.js / GraphQL" },
+      { name: "Data", detail: "A solid foundation for everything on top.", tools: "PostgreSQL / Redis / Kafka" },
+    ],
+    projectTypes: ["Gaming marketplace", "Personal website", "Movie ticketing", "Web & mobile ordering", "Furniture commerce"],
+    footer: "Thoughtfully built, all the way through.",
+  },
   about: {
     paragraphs: [
       "I’m Raihan Irvana, a Fullstack Engineer with a strong foundation in the JavaScript ecosystem and hands-on experience building products across both frontend and backend.",
@@ -33,10 +59,12 @@ export const enDictionary: PortfolioDictionary = {
   experience: {
     company: "PT Bank SMBC Indonesia",
     items: [
-      "Built and maintained digital banking features across frontend and backend for a product used by millions.",
-      "Worked across mobile frontend and backend services within microfrontend and microservices architecture in a large-scale banking environment.",
-      "Delivered features end-to-end, from refining requirements and implementation to testing, release, and production readiness.",
-      "Also supported product ownership responsibilities for around a year, including backlog refinement, PRD preparation, prioritization, release alignment, and stakeholder coordination.",
+      "Built lending journeys across credit assessment, credit limits, Flexi Cash, Pay Later, and credit cards within Jenius mobile microfrontends and backend services.",
+      "Developed React Native features with Redux, Apollo GraphQL, React Hook Form, shared components, and Flow; improved responsiveness through lazy queries, memoization, and reusable hooks.",
+      "Built Node.js microservices and GraphQL/REST integrations with Express and Hapi, Joi validation, MongoDB persistence, and Redis caching.",
+      "Contributed to Kafka-based workers and scheduled cron jobs for lending applications, activation, limit updates, billing, and retry workflows.",
+      "Tested mobile and backend changes with Jest, React Native Testing Library, Mocha, Chai, and Sinon; supported SIT/UAT, Jenkins/OpenShift releases, and New Relic monitoring.",
+      "Acting Product Owner, Feb 2025–Mar 2026, alongside engineering: prepared PRDs and acceptance criteria, refined priorities, and coordinated stakeholders, testing, and release readiness.",
     ],
     role: "Fullstack Engineer, Jenius Digital Banking",
     subtitle: "Selected professional experience",
@@ -52,11 +80,11 @@ export const enDictionary: PortfolioDictionary = {
   hero: {
     cta: "View Selected Work",
     description:
-      "Fullstack Engineer building modern digital products with strong product sense, clean architecture, and calm execution across frontend and backend.",
+      "I turn product ideas into reliable digital experiences. Frontend, backend, and all the connections in between.",
     domain: "raihan irvana",
     subtitle: "JavaScript ecosystem · Product-minded delivery · Scalable systems",
-    titleLine1: "Simple in appearance.",
-    titleLine2: "Deliberate in execution.",
+    titleLine1: "Thoughtfully built.",
+    titleLine2: "From end to end.",
   },
 
   highlights: {
@@ -69,7 +97,7 @@ export const enDictionary: PortfolioDictionary = {
     description:
       "A product-minded fullstack engineer focused on balanced delivery, scalable systems, and work that stays clean as it grows.",
     focusDescription:
-      "Modern JavaScript systems, balanced frontend-backend development, and architecture built to stay maintainable.",
+      "Web, mobile, APIs, and the systems that connect them.",
     focusTitle: "Focus",
     title: "Profile",
   },
@@ -139,11 +167,14 @@ export const enDictionary: PortfolioDictionary = {
   },
 
   skills: {
+    categoryLabel: "Explore by category",
     groups: [
-      { items: ["React Native", "React", "Next.js", "TypeScript", "Tailwind CSS"], label: "Frontend" },
-      { items: ["Node.js", "Express.js", "GraphQL", "REST API", "Joi"], label: "Backend" },
-      { items: ["PostgreSQL", "Redis", "Kafka", "Jenkins", "OpenShift"], label: "Data & Infra" },
-      { items: ["Microfrontend", "Microservices", "Testing", "Code Review", "Accessibility"], label: "Practices" },
+      { items: ["JavaScript", "TypeScript", "Flow", "React", "React Native", "Next.js", "Nuxt.js", "Redux / Redux Toolkit", "Apollo Client", "React Hook Form", "Tailwind CSS"], label: "Frontend & Mobile" },
+      { items: ["Node.js", "Express.js", "NestJS", "Hapi", "GraphQL", "REST APIs", "Joi", "Zod"], label: "Backend & APIs" },
+      { items: ["PostgreSQL", "MongoDB", "Supabase", "Redis", "Kafka", "Elasticsearch", "MinIO"], label: "Data & Messaging" },
+      { items: ["Kafka consumers", "Background workers", "Cron jobs", "Microservices", "Microfrontends", "Feature flags"], label: "Workers & Architecture" },
+      { items: ["Jest", "React Native Testing Library", "Enzyme", "Mocha", "Chai", "Sinon", "Supertest", "NYC / Istanbul"], label: "Testing" },
+      { items: ["Git", "Docker", "Jenkins", "OpenShift", "New Relic", "SIT / UAT"], label: "Deployment & Monitoring" },
     ],
     subtitle: "Core tools and strengths",
     title: "Skills",

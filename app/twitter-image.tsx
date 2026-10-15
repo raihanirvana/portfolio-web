@@ -12,7 +12,7 @@ export const size = {
 export const contentType = "image/png";
 
 const containerStyle = {
-  background: "linear-gradient(135deg, #111111 0%, #2d2d2d 100%)",
+  background: "#30332e",
   color: "#ffffff",
   display: "flex",
   flexDirection: "column",
@@ -24,12 +24,11 @@ const containerStyle = {
 
 const badgeStyle = {
   border: "2px solid rgba(255,255,255,0.16)",
-  borderRadius: "999px",
+  borderRadius: "14px",
   alignSelf: "flex-start",
   fontSize: 28,
-  letterSpacing: "0.28em",
+  letterSpacing: "-0.03em",
   padding: "18px 28px",
-  textTransform: "uppercase",
 } as const;
 
 const bodyStyle = {

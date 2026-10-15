@@ -12,8 +12,8 @@ export const size = {
 export const contentType = "image/png";
 
 const containerStyle = {
-  background: "radial-gradient(circle at top, #ffffff 0%, #f4f3ef 42%, #e9e7e2 100%)",
-  color: "#111111",
+  background: "#f3f2ee",
+  color: "#30332e",
   display: "flex",
   flexDirection: "column",
   height: "100%",
@@ -23,13 +23,13 @@ const containerStyle = {
 } as const;
 
 const badgeStyle = {
-  border: "2px solid rgba(17,17,17,0.08)",
-  borderRadius: "999px",
+  background: "#68715a",
+  color: "#ffffff",
+  borderRadius: "14px",
   alignSelf: "flex-start",
   fontSize: 28,
-  letterSpacing: "0.28em",
+  letterSpacing: "-0.03em",
   padding: "18px 28px",
-  textTransform: "uppercase",
 } as const;
 
 const bodyStyle = {
@@ -59,7 +59,7 @@ const stackStyle = {
  * Renders the Open Graph content badge.
  */
 function OpenGraphBadge() {
-  return <div style={badgeStyle}>raihan irvana</div>;
+  return <div style={badgeStyle}>Raihan Irvana</div>;
 }
 
 /**
@@ -68,8 +68,8 @@ function OpenGraphBadge() {
 function OpenGraphBody() {
   return (
     <div style={bodyStyle}>
-      <div style={titleStyle}>Raihan Irvana</div>
-      <div style={subtitleStyle}>Fullstack Engineer focused on scalable digital products</div>
+      <div style={titleStyle}>Thoughtfully built. From end to end.</div>
+      <div style={subtitleStyle}>Fullstack Engineer / Frontend to backend</div>
       <div style={stackStyle}>Next.js · React · React Native · Node.js · TypeScript</div>
     </div>
   );

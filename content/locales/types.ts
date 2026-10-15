@@ -6,6 +6,28 @@ export type ModalKey =
   | "contact";
 
 export type PortfolioDictionary = {
+  studio: {
+    back: string;
+    greeting: string;
+    availability: string;
+    workTitle: string;
+    workDescription: string;
+    repositories: string;
+    source: string;
+    illustration: string;
+    otherWork: string;
+    experienceTitle: string;
+    aboutTitle: string;
+    contactTitle: string;
+    contactCta: string;
+    backToTop: string;
+    skipLink: string;
+    architecture: string;
+    layerLabel: string;
+    layers: Array<{ name: string; detail: string; tools: string }>;
+    projectTypes: string[];
+    footer: string;
+  };
   about: {
     paragraphs: string[];
     subtitle: string;
@@ -77,6 +99,7 @@ export type PortfolioDictionary = {
     title: string;
   };
   skills: {
+    categoryLabel: string;
     groups: Array<{
       items: string[];
       label: string;

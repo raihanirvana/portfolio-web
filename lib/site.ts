@@ -4,6 +4,6 @@ export const siteConfig = {
   name: "Raihan Irvana",
   shortName: "Raihan",
   siteUrl: "https://raihanirvana.com",
-  themeColor: "#111111",
+  themeColor: "#f3f2ee",
   title: "Raihan Irvana | Fullstack Engineer",
 } as const;

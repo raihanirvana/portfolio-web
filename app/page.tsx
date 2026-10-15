@@ -21,18 +21,9 @@ export const metadata: Metadata = {
   ],
 };
 
-const knowsAbout = [
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "React Native",
-  "Node.js",
-  "Express.js",
-  "GraphQL",
-  "PostgreSQL",
-  "Microservices",
-];
+const knowsAbout = Array.from(
+  new Set(enDictionary.skills.groups.flatMap((group) => group.items)),
+);
 
 /**
  * Builds the website schema entry.

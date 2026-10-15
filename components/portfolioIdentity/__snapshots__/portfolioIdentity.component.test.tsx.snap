@@ -1,66 +1,120 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`portfolioIdentity.component matches the identity column snapshot 1`] = `
+exports[`portfolioIdentity.component matches the initial toolkit snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="order-2 flex flex-col gap-4 lg:order-1 lg:justify-center"
+    class="skills-view stage-enter"
   >
     <div
-      class="rounded-[1.75rem] border border-zinc-200/90 bg-white/90 p-5 shadow-sm"
+      class="skills-heading"
     >
       <p
-        class="text-[10px] uppercase tracking-[0.24em] text-zinc-400"
+        class="view-label"
       >
-        Profile
+        Core tools and strengths
       </p>
-      <p
-        class="mt-3 text-sm leading-7 text-zinc-600"
-      >
-        A product-minded fullstack engineer focused on balanced delivery, scalable systems, and work that stays clean as it grows.
+      <h1>
+        Skills.
+      </h1>
+      <p>
+        Web, mobile, APIs, and the systems that connect them.
       </p>
     </div>
     <div
-      class="rounded-[1.75rem] border border-zinc-950 bg-zinc-950 p-5 text-white shadow-[0_12px_28px_rgba(0,0,0,0.12)]"
+      class="skill-catalog"
     >
-      <div
-        class="flex items-center gap-2 text-zinc-400"
+      <label
+        class="skill-category-label"
+        for="skill-category"
       >
-        <svg
-          aria-hidden="true"
-          class="h-4 w-4"
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
+        Explore by category
+      </label>
+      <select
+        id="skill-category"
+      >
+        <option
+          value="0"
         >
-          <path
-            d="m12 3 1.9 4.1L18 9l-4.1 1.9L12 15l-1.9-4.1L6 9l4.1-1.9z"
-          />
-          <path
-            d="M5 3v4"
-          />
-          <path
-            d="M3 5h4"
-          />
-          <path
-            d="M19 17v4"
-          />
-          <path
-            d="M17 19h4"
-          />
-        </svg>
-        <span
-          class="text-[10px] uppercase tracking-[0.24em]"
+          Frontend & Mobile
+        </option>
+        <option
+          value="1"
         >
-          Focus
-        </span>
+          Backend & APIs
+        </option>
+        <option
+          value="2"
+        >
+          Data & Messaging
+        </option>
+        <option
+          value="3"
+        >
+          Workers & Architecture
+        </option>
+        <option
+          value="4"
+        >
+          Testing
+        </option>
+        <option
+          value="5"
+        >
+          Deployment & Monitoring
+        </option>
+      </select>
+      <div
+        aria-live="polite"
+        class="skill-items"
+      >
+        <h2
+          class="sr-only"
+        >
+          Frontend & Mobile
+        </h2>
+        <ul>
+          <li>
+            JavaScript
+          </li>
+          <li>
+            TypeScript
+          </li>
+          <li>
+            Flow
+          </li>
+          <li>
+            React
+          </li>
+          <li>
+            React Native
+          </li>
+          <li>
+            Next.js
+          </li>
+          <li>
+            Nuxt.js
+          </li>
+          <li>
+            Redux / Redux Toolkit
+          </li>
+          <li>
+            Apollo Client
+          </li>
+          <li>
+            React Hook Form
+          </li>
+          <li>
+            Tailwind CSS
+          </li>
+        </ul>
       </div>
       <p
-        class="mt-4 text-sm leading-7 text-zinc-300"
+        class="skill-count"
       >
-        Modern JavaScript systems, balanced frontend-backend development, and architecture built to stay maintainable.
+        01
+        <span>
+          / 06
+        </span>
       </p>
     </div>
   </div>

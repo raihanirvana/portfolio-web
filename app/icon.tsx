@@ -9,7 +9,7 @@ export const contentType = "image/png";
 
 const iconStyle = {
   alignItems: "center",
-  background: "linear-gradient(135deg, #111111 0%, #2d2d2d 100%)",
+  background: "#68715a",
   color: "#ffffff",
   display: "flex",
   fontSize: 180,

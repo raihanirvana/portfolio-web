@@ -1,109 +1,65 @@
 import React from "react";
-import { act, fireEvent, render } from "@testing-library/react";
-
-jest.mock("next/dynamic", () =>
-  function dynamic() {
-    return function DynamicModal(
-      props: React.ComponentProps<typeof import("../portfolioPageModal/portfolioPageModal.component").PortfolioModal>,
-    ) {
-      const { PortfolioModal } = require("../portfolioPageModal/portfolioPageModal.component");
-
-      return <PortfolioModal {...props} />;
-    };
-  });
-
-jest.mock("framer-motion", () => {
-  const motion = new Proxy(
-    {},
-    {
-      get: (_target, tag: string) =>
-        function MotionComponent({
-          children,
-          ...props
-        }: React.ComponentPropsWithoutRef<"div">) {
-          return React.createElement(tag, props, children);
-        },
-    },
-  );
-
-  return {
-    AnimatePresence: ({ children }: { children: React.ReactNode }) => children,
-    LazyMotion: ({ children }: { children: React.ReactNode }) => children,
-    domAnimation: {},
-    m: motion,
-    motion,
-    useReducedMotion: () => false,
-  };
-}, { virtual: true });
-
+import { fireEvent, render, screen, waitFor, within } from "@testing-library/react";
 import { PortfolioPage } from "./portfolioPage";
 import { enDictionary } from "@/content/locales/en";
 
+function navigate(name: string) {
+  fireEvent.click(within(screen.getByRole("navigation", { name: "Main navigation" })).getByRole("button", { name }));
+}
+
 describe("PortfolioPage", () => {
-  beforeEach(() => {
-    window.localStorage.clear();
-    document.documentElement.lang = "";
+  beforeEach(() => window.localStorage.clear());
+
+  it("replaces the central view instead of stacking sections", () => {
+    render(<PortfolioPage initialContent={enDictionary} />);
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(enDictionary.hero.titleLine1);
+    navigate("Projects");
+    expect(screen.getByRole("heading", { name: "Account Arena" })).toBeInTheDocument();
+    expect(screen.queryByText(enDictionary.hero.titleLine1)).not.toBeInTheDocument();
+    navigate("Experience");
+    expect(screen.getByRole("heading", { name: "Jenius." })).toBeInTheDocument();
+    expect(screen.queryByRole("heading", { name: "Account Arena" })).not.toBeInTheDocument();
+    navigate("Skills");
+    expect(screen.getByRole("heading", { name: "Skills." })).toBeInTheDocument();
+    navigate("Contact");
+    expect(screen.getByRole("link", { name: "raihanirvana13@gmail.com" })).toHaveAttribute("href", enDictionary.socials.email);
   });
 
-  const configs = [
-    {
-      desc: "matches the initial english snapshot",
-    },
-    {
-      beforeTest: async (container: HTMLElement) => {
-        await act(async () => {
-          fireEvent.click(container.querySelectorAll("button")[0]);
-          await Promise.resolve();
-        });
-      },
-      desc: "matches the indonesian snapshot",
-    },
-    {
-      beforeTest: (container: HTMLElement) => {
-        fireEvent.click(container.querySelectorAll("button")[3]);
-      },
-      desc: "matches the about modal snapshot",
-    },
-    {
-      beforeTest: (container: HTMLElement) => {
-        fireEvent.click(container.querySelectorAll("button")[4]);
-      },
-      desc: "matches the experience modal snapshot",
-    },
-    {
-      beforeTest: (container: HTMLElement) => {
-        fireEvent.click(container.querySelectorAll("button")[5]);
-      },
-      desc: "matches the projects modal snapshot",
-    },
-    {
-      beforeTest: (container: HTMLElement) => {
-        fireEvent.click(container.querySelectorAll("button")[6]);
-      },
-      desc: "matches the skills modal snapshot",
-    },
-    {
-      beforeTest: (container: HTMLElement) => {
-        fireEvent.click(container.querySelectorAll("button")[7]);
-      },
-      desc: "matches the contact modal snapshot",
-    },
-    {
-      beforeTest: (container: HTMLElement) => {
-        fireEvent.click(container.querySelectorAll("button")[3]);
-        fireEvent.keyDown(window, { key: "Escape" });
-      },
-      desc: "matches the closed modal snapshot after escape",
-    },
-  ];
+  it("makes every project and its original repository available", () => {
+    render(<PortfolioPage initialContent={enDictionary} />);
+    fireEvent.click(screen.getByRole("button", { name: enDictionary.hero.cta }));
+    const projects = screen.getByRole("group", { name: "Projects" });
+    for (const project of enDictionary.projects.items) {
+      fireEvent.click(within(projects).getByRole("button", { name: project.name }));
+      expect(screen.getByRole("heading", { name: project.name })).toBeInTheDocument();
+      for (const link of project.links) expect(screen.getAllByRole("link").some((element) => element.getAttribute("href") === link.href)).toBe(true);
+    }
+  });
 
-  it.each(configs)("$desc", async ({ beforeTest }) => {
-    const { asFragment, container } = render(
-      <PortfolioPage initialContent={enDictionary} />,
-    );
+  it("cycles all experience responsibilities in both directions", () => {
+    render(<PortfolioPage initialContent={enDictionary} />);
+    navigate("Experience");
+    for (const item of enDictionary.experience.items) {
+      expect(screen.getByText(item)).toBeInTheDocument();
+      fireEvent.click(screen.getByRole("button", { name: "Next responsibility" }));
+    }
+    expect(screen.getByText(enDictionary.experience.items[0])).toBeInTheDocument();
+    fireEvent.click(screen.getByRole("button", { name: "Previous responsibility" }));
+    expect(screen.getByText(enDictionary.experience.items[enDictionary.experience.items.length - 1])).toBeInTheDocument();
+  });
 
-    await beforeTest?.(container);
-
-    expect(asFragment()).toMatchSnapshot();
+  it("preserves language across reloads and view changes", async () => {
+    const { unmount } = render(<PortfolioPage initialContent={enDictionary} />);
+    fireEvent.click(screen.getByRole("button", { name: "ID" }));
+    expect(await screen.findByRole("link", { name: "Unduh CV" })).toHaveAttribute("download", "Raihan_Irvana_CV.pdf");
+    expect(document.documentElement.lang).toBe("id");
+    unmount();
+    render(<PortfolioPage initialContent={enDictionary} />);
+    expect(await screen.findByRole("link", { name: "Unduh CV" })).toBeInTheDocument();
+    fireEvent.click(within(screen.getByRole("navigation", { name: "Navigasi utama" })).getByRole("button", { name: "Proyek" }));
+    expect(screen.getByText("Marketplace game")).toBeInTheDocument();
+    fireEvent.click(screen.getByRole("button", { name: "EN" }));
+    await waitFor(() => expect(document.title).toBe(enDictionary.metadata.title));
+    expect(screen.getByRole("heading", { name: "Account Arena" })).toBeInTheDocument();
   });
 });

@@ -1,13 +1,39 @@
 import type { PortfolioDictionary } from "./types";
 
 export const idDictionary: PortfolioDictionary = {
+  studio: {
+    back: "Kembali",
+    greeting: "Halo, saya Raihan. Fullstack Engineer.",
+    availability: "Terbuka untuk kerja remote",
+    workTitle: "Beberapa karya saya.",
+    workDescription: "Beberapa proyek yang saya kerjakan, dari frontend hingga backend.",
+    repositories: "Semua repositori",
+    source: "Lihat kode",
+    illustration: "Ilustrasi antarmuka",
+    otherWork: "Karya lainnya",
+    experienceTitle: "Pengalaman di Jenius.",
+    aboutTitle: "Membangun produk dari frontend hingga backend.",
+    contactTitle: "Mari bekerja sama.",
+    contactCta: "Hubungi saya",
+    backToTop: "Kembali ke atas",
+    skipLink: "Langsung ke konten",
+    architecture: "Satu produk. Setiap lapisan.",
+    layerLabel: "Jelajahi stack",
+    layers: [
+      { name: "Antarmuka", detail: "Antarmuka web dan mobile yang mudah digunakan.", tools: "React / Next.js / React Native" },
+      { name: "Layanan", detail: "API dan layanan yang dapat diandalkan.", tools: "Node.js / Express.js / GraphQL" },
+      { name: "Data", detail: "Penyimpanan dan pengolahan data.", tools: "PostgreSQL / Redis / Kafka" },
+    ],
+    projectTypes: ["Marketplace game", "Website personal", "Pemesanan tiket film", "Pemesanan web & mobile", "E-commerce furnitur"],
+    footer: "Dibangun dengan teliti, dari awal hingga akhir.",
+  },
   about: {
     paragraphs: [
-      "Saya Raihan Irvana, seorang Fullstack Engineer dengan fondasi yang kuat di ekosistem JavaScript dan pengalaman membangun produk di frontend maupun backend.",
-      "Saya menikmati engineering yang matang, arah produk yang jelas, dan eksekusi yang rapi. Pendekatan saya sederhana: membangun hal yang andal, mudah dirawat, dan benar-benar berguna.",
-      "Saya memiliki pengalaman di digital banking, terlibat dalam pengembangan produk secara end-to-end, dan bekerja lintas engineering maupun product untuk membantu menghadirkan fitur dengan jelas dan terarah.",
+      "Saya Raihan Irvana, Fullstack Engineer yang membangun aplikasi web dan mobile dengan JavaScript dan TypeScript.",
+      "Saya mengutamakan alur penggunaan yang jelas, kode yang mudah dirawat, dan sistem yang dapat diandalkan.",
+      "Di Jenius, saya mengerjakan fitur lending dari frontend hingga backend, termasuk integrasi API, background workers, dan proses rilis.",
     ],
-    subtitle: "Perkenalan singkat",
+    subtitle: "Tentang saya",
     title: "Tentang",
   },
 
@@ -42,20 +68,22 @@ export const idDictionary: PortfolioDictionary = {
         value: "github.com/raihanirvana",
       },
     ],
-    subtitle: "Terbuka untuk peluang remote dan kolaborasi yang relevan",
+    subtitle: "Terbuka untuk pekerjaan remote dan kolaborasi.",
     title: "Kontak",
   },
 
   experience: {
     company: "PT Bank SMBC Indonesia",
     items: [
-      "Membangun dan memelihara fitur digital banking di frontend dan backend untuk produk yang digunakan oleh jutaan pengguna.",
-      "Berkontribusi pada mobile frontend dan backend services dalam arsitektur microfrontend dan microservices di lingkungan perbankan berskala besar.",
-      "Mengirim fitur secara end-to-end, mulai dari merapikan kebutuhan, implementasi, testing, release, hingga kesiapan produksi.",
-      "Turut menjalankan tanggung jawab product ownership selama sekitar satu tahun, termasuk backlog refinement, penyusunan PRD, prioritisasi, release alignment, dan koordinasi stakeholder.",
+      "Mengembangkan fitur lending Jenius untuk pengajuan kredit, pengelolaan limit, Flexi Cash, Pay Later, dan kartu kredit pada aplikasi mobile dan layanan backend.",
+      "Mengembangkan fitur React Native dengan Redux, Apollo GraphQL, React Hook Form, dan Flow. Menggunakan shared components, custom hooks, lazy queries, serta memoization.",
+      "Membangun microservices Node.js dengan Express dan Hapi, integrasi GraphQL/REST, validasi Joi, penyimpanan MongoDB, serta caching Redis.",
+      "Mengerjakan Kafka workers dan cron jobs untuk pengajuan kredit, aktivasi, pembaruan limit, penagihan, dan retry.",
+      "Menulis tes dengan Jest, React Native Testing Library, Mocha, Chai, dan Sinon. Mendukung SIT/UAT, deployment melalui Jenkins/OpenShift, serta monitoring dengan New Relic.",
+      "Acting Product Owner (Feb 2025–Mar 2026), sekaligus engineer: menyusun PRD, backlog, dan acceptance criteria; mengoordinasikan stakeholder, SIT/UAT, dan rilis.",
     ],
     role: "Fullstack Engineer, Jenius Digital Banking",
-    subtitle: "Pengalaman profesional pilihan",
+    subtitle: "Pengalaman kerja",
     title: "Pengalaman",
     year: "Agu 2023 — Sekarang",
   },
@@ -66,13 +94,13 @@ export const idDictionary: PortfolioDictionary = {
   },
 
   hero: {
-    cta: "Lihat Proyek Pilihan",
+    cta: "Lihat proyek",
     description:
-      "Fullstack Engineer yang membangun produk digital modern dengan product sense yang kuat, arsitektur yang bersih, dan eksekusi yang tenang di frontend maupun backend.",
+      "Saya membangun aplikasi web dan mobile, dari tampilan yang digunakan sehari-hari hingga layanan di baliknya.",
     domain: "raihan irvana",
-    subtitle: "Ekosistem JavaScript · Product-minded delivery · Sistem yang scalable",
-    titleLine1: "Sederhana dalam tampilan.",
-    titleLine2: "Presisi dalam eksekusi.",
+    subtitle: "JavaScript · Pengembangan produk · Arsitektur sistem",
+    titleLine1: "Dirancang matang.",
+    titleLine2: "Dibangun tuntas.",
   },
 
   highlights: {
@@ -80,7 +108,7 @@ export const idDictionary: PortfolioDictionary = {
     items: [
       "3+ tahun pengalaman",
       "Ekosistem JavaScript",
-      "Terbuka untuk remote",
+      "Terbuka untuk kerja remote",
       "Fullstack end-to-end",
     ],
     title: "Sorotan",
@@ -88,9 +116,9 @@ export const idDictionary: PortfolioDictionary = {
 
   identity: {
     description:
-      "Fullstack engineer dengan pendekatan product-minded, fokus pada delivery yang seimbang, sistem yang scalable, dan hasil kerja yang tetap rapi saat berkembang.",
+      "Fullstack Engineer dengan pengalaman membangun aplikasi mobile, layanan backend, dan integrasi antarsistem.",
     focusDescription:
-      "Sistem JavaScript modern, pengembangan frontend-backend yang seimbang, dan arsitektur yang dirancang agar tetap maintainable.",
+      "Web, mobile, dan backend.",
     focusTitle: "Fokus",
     title: "Profil",
   },
@@ -101,7 +129,7 @@ export const idDictionary: PortfolioDictionary = {
 
   metadata: {
     description:
-      "Portofolio Raihan Irvana, Fullstack Engineer yang membangun produk digital scalable dengan Next.js, React, React Native, Node.js, TypeScript, dan arsitektur JavaScript modern.",
+      "Portofolio Raihan Irvana, Fullstack Engineer dengan pengalaman React, React Native, Next.js, Node.js, dan TypeScript.",
     title: "Raihan Irvana | Portofolio Fullstack Engineer",
   },
 
@@ -110,7 +138,7 @@ export const idDictionary: PortfolioDictionary = {
   projects: {
     items: [
       {
-        desc: "Aplikasi web marketplace untuk jual beli akun game, dibangun dengan stack frontend modern dan alur untuk listing, discovery, serta transaksi akun.",
+        desc: "Marketplace untuk jual beli akun game, dengan fitur pencarian, katalog, dan transaksi.",
         links: [
           {
             href: "https://github.com/accarena07/account-arena",
@@ -125,7 +153,7 @@ export const idDictionary: PortfolioDictionary = {
         stack: "Next.js · Tailwind",
       },
       {
-        desc: "Website portofolio personal yang dibuat untuk menampilkan profil, pengalaman, proyek pilihan, dan informasi kontak melalui antarmuka bilingual yang polished.",
+        desc: "Website portofolio dua bahasa untuk menampilkan profil, pengalaman, proyek, dan kontak.",
         links: [
           {
             href: "https://github.com/raihanirvana/portfolio-web",
@@ -136,7 +164,7 @@ export const idDictionary: PortfolioDictionary = {
         stack: "Next.js · Tailwind",
       },
       {
-        desc: "Platform pemesanan tiket film yang dikembangkan dalam setup tim, mencakup alur booking, authentication, dan transaction journey secara fullstack.",
+        desc: "Proyek tim untuk pemesanan tiket film, mencakup login, pemesanan, riwayat pembelian, dan pengelolaan profil.",
         links: [
           {
             href: "https://github.com/raihanirvana/TICKETING-FE",
@@ -151,7 +179,7 @@ export const idDictionary: PortfolioDictionary = {
         stack: "Next.js · Express.js · Tailwind",
       },
       {
-        desc: "Platform pemesanan dengan authentication, order flow, profile management, landing page experience, serta implementasi multi-client di web dan mobile.",
+        desc: "Aplikasi pemesanan kopi berbasis web dan mobile, dengan fitur login, pemesanan, dan pengelolaan profil.",
         links: [
           {
             href: "https://github.com/raihanirvana/Coffee-Shop-FrontEnd",
@@ -170,7 +198,7 @@ export const idDictionary: PortfolioDictionary = {
         stack: "React · Express.js · PostgreSQL",
       },
       {
-        desc: "Platform commerce furniture yang dikembangkan lewat repository frontend dan backend terpisah dengan pendekatan fullstack.",
+        desc: "Proyek tim untuk toko furnitur online. Saya berkontribusi pada frontend, backend, dan integrasi alur pembelian.",
         links: [
           {
             href: "https://github.com/digi-squad/raz-fe",
@@ -185,30 +213,21 @@ export const idDictionary: PortfolioDictionary = {
         stack: "JavaScript · Express.js · Web App",
       },
     ],
-    subtitle: "Beberapa karya pilihan",
+    subtitle: "Proyek pilihan",
     title: "Proyek",
   },
 
   skills: {
+    categoryLabel: "Kategori teknologi",
     groups: [
-      {
-        items: ["React Native", "React", "Next.js", "TypeScript", "Tailwind CSS"],
-        label: "Frontend",
-      },
-      {
-        items: ["Node.js", "Express.js", "GraphQL", "REST API", "Joi"],
-        label: "Backend",
-      },
-      {
-        items: ["PostgreSQL", "Redis", "Kafka", "Jenkins", "OpenShift"],
-        label: "Data & Infrastruktur",
-      },
-      {
-        items: ["Microfrontend", "Microservices", "Testing", "Code Review", "Accessibility"],
-        label: "Praktik Engineering",
-      },
+      { items: ["JavaScript", "TypeScript", "Flow", "React", "React Native", "Next.js", "Nuxt.js", "Redux / Redux Toolkit", "Apollo Client", "React Hook Form", "Tailwind CSS"], label: "Frontend & Mobile" },
+      { items: ["Node.js", "Express.js", "NestJS", "Hapi", "GraphQL", "REST APIs", "Joi", "Zod"], label: "Backend & APIs" },
+      { items: ["PostgreSQL", "MongoDB", "Supabase", "Redis", "Kafka", "Elasticsearch", "MinIO"], label: "Data & Messaging" },
+      { items: ["Kafka consumers", "Background workers", "Cron jobs", "Microservices", "Microfrontends", "Feature flags"], label: "Workers & Architecture" },
+      { items: ["Jest", "React Native Testing Library", "Enzyme", "Mocha", "Chai", "Sinon", "Supertest", "NYC / Istanbul"], label: "Testing" },
+      { items: ["Git", "Docker", "Jenkins", "OpenShift", "New Relic", "SIT / UAT"], label: "Deployment & Monitoring" },
     ],
-    subtitle: "Tools inti dan kekuatan utama",
+    subtitle: "Teknologi yang saya gunakan",
     title: "Keahlian",
   },
 
