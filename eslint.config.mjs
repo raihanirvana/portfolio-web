@@ -14,7 +14,7 @@ const compat = new FlatCompat({
 const config = [
   ...compat.extends("next/core-web-vitals"),
   {
-    ignores: ["**/__snapshots__/**", ".next/**", "node_modules/**"],
+    ignores: ["**/__snapshots__/**", ".next/**", ".next-dev/**", "node_modules/**"],
   },
   {
     files: ["**/*.{js,jsx,ts,tsx}"],

@@ -24,7 +24,7 @@ export const idDictionary: PortfolioDictionary = {
       { name: "Layanan", detail: "API dan layanan yang dapat diandalkan.", tools: "Node.js / Express.js / GraphQL" },
       { name: "Data", detail: "Penyimpanan dan pengolahan data.", tools: "PostgreSQL / Redis / Kafka" },
     ],
-    projectTypes: ["Marketplace game", "Website personal", "Pemesanan tiket film", "Pemesanan web & mobile", "E-commerce furnitur"],
+    projectTypes: ["Marketplace game", "Website personal", "Pemesanan tiket film", "Kasir & penjualan", "Booking rental PS"],
     footer: "Dibangun dengan teliti, dari awal hingga akhir.",
   },
   about: {
@@ -179,38 +179,34 @@ export const idDictionary: PortfolioDictionary = {
         stack: "Next.js · Express.js · Tailwind",
       },
       {
-        desc: "Aplikasi pemesanan kopi berbasis web dan mobile, dengan fitur login, pemesanan, dan pengelolaan profil.",
+        desc: "Demo aplikasi kasir kafe dengan checkout, pengelolaan stok, cetak struk, dan laporan penjualan. Coba sisi kasir dan pemilik di ruang demo sendiri.",
         links: [
           {
-            href: "https://github.com/raihanirvana/Coffee-Shop-FrontEnd",
-            label: "Frontend",
+            href: "https://seduh-pos.onrender.com",
+            label: "Coba demo",
           },
           {
-            href: "https://github.com/raihanirvana/Coffee-Shop-BE",
-            label: "Backend",
-          },
-          {
-            href: "https://github.com/raihanirvana/CoffeeShop-Mobile-Native",
-            label: "Mobile",
+            href: "https://github.com/raihanirvana/POS",
+            label: "Kode sumber",
           },
         ],
-        name: "Coffee Shop Online",
-        stack: "React · Express.js · PostgreSQL",
+        name: "Seduh POS",
+        stack: "React · Vite · Express.js · SQLite",
       },
       {
-        desc: "Proyek tim untuk toko furnitur online. Saya berkontribusi pada frontend, backend, dan integrasi alur pembelian.",
+        desc: "Booking rental PS di tempat per jam, dengan pilihan slot, pencegahan jadwal bentrok, dan agenda pemilik. Setiap pengunjung mendapat ruang demo sendiri.",
         links: [
           {
-            href: "https://github.com/digi-squad/raz-fe",
-            label: "Frontend",
+            href: "https://sesi-play.onrender.com",
+            label: "Coba demo",
           },
           {
-            href: "https://github.com/raihanirvana/raz-be",
-            label: "Backend",
+            href: "https://github.com/raihanirvana/rental-ps",
+            label: "Kode sumber",
           },
         ],
-        name: "Raz Furniture",
-        stack: "JavaScript · Express.js · Web App",
+        name: "Sesi Play",
+        stack: "React · Vite · Express.js · SQLite",
       },
     ],
     subtitle: "Proyek pilihan",
